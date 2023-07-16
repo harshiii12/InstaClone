@@ -37,7 +37,7 @@ class _PostcardsState extends State<Postcards> {
                 if(widget.liked){
                 const snackbar=SnackBar(content: Text('You liked this post'),);
                 ScaffoldMessenger.of(context).showSnackBar(snackbar);}
-              }, icon: (widget.liked==true) ? const Icon(Icons.favorite,color: Colors.red,size: 30,) : const Icon(Icons.favorite_outline,color: Colors.black,size: 30,),),
+              }, icon: (widget.liked==true) ? const Icon(Icons.favorite,color: Colors.red,size: 30,) : const Icon(Icons.favorite_outline,color: Colors.white,size: 30,),),
               IconButton(onPressed: (){}, icon: const Icon(Icons.mode_comment_outlined, size: 30,)),
               IconButton(onPressed: (){}, icon: const Icon(Icons.send, size: 30,))
             ],
@@ -48,15 +48,15 @@ class _PostcardsState extends State<Postcards> {
             child:RichText(
               text: TextSpan(
                   children: [
-                    TextSpan(text: widget.person_name + " ", style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
-                    TextSpan(text: widget.post_desc,style: const TextStyle(color:Colors.black)),
+                    TextSpan(text: widget.person_name + " ", style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+                    TextSpan(text: widget.post_desc,style: const TextStyle(color:Colors.white)),
 
                   ]
               ),
             ) ,
           ),
           const SizedBox(
-            height: 20,width: double.infinity,
+            height: 1,width: double.infinity,
           ),
           Container(
             alignment: Alignment.topLeft,

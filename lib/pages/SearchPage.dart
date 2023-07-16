@@ -12,23 +12,26 @@ class _SearchPageState extends State<SearchPage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.black,
         elevation: 0,
         flexibleSpace: Container(
           alignment: Alignment.bottomLeft,
-          child:ElevatedButton(style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.grey),
-            elevation: MaterialStateProperty.all(0)
+          child:Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.grey.shade800),
+              elevation: MaterialStateProperty.all(0)
 
-          ),onPressed: (){
-                showSearch(context: context, delegate: MySearchDelegate());
-              },child: Row(
-            children: const [
-              Icon(Icons.search),
-              Text("  Search")
-            ],
-          ),
+            ),onPressed: (){
+                  showSearch(context: context, delegate: MySearchDelegate());
+                },child: Row(
+              children: const [
+                Icon(Icons.search),
+                Text(" Search")
+              ],
+            ),
 
+            ),
           )
         ),
       ),

@@ -21,7 +21,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  ThemeMode _themeMode=ThemeMode.light;
+  ThemeMode _themeMode=ThemeMode.dark;
   void changeTheme(ThemeMode themeMode) {
     setState(() {
       _themeMode = themeMode;
@@ -30,6 +30,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         themeMode: _themeMode,
         darkTheme: ThemeData.dark(),
@@ -55,12 +56,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.black,
         elevation: 0,
       ),
-      body: Center(
-
+      body:
+      Center(
         child: Column(
           children: <Widget>[
             const Padding(padding: EdgeInsets.fromLTRB(0,100.0,0,100.0),child:Text(
@@ -69,6 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: 90,
                 fontFamily: 'Billabong',
                 fontWeight: FontWeight.w500,
+                color: Colors.white,
               ),
             ) ,),
             Padding(padding: EdgeInsets.all(32.0),
@@ -98,16 +101,16 @@ class _MyHomePageState extends State<MyHomePage> {
                               Radius.circular(2),
                             ),
                             side: BorderSide(color: Colors.blueAccent)))))),
-            Switch(value: _value, onChanged: (value){
-              setState(() {
-                _value = value;
-                if (_value) {
-                  MyApp.of(context)!.changeTheme(ThemeMode.dark);
-                } else {
-                  MyApp.of(context)!.changeTheme(ThemeMode.light);
-                }
-              });
-            }),
+            // Switch(value: _value, onChanged: (value){
+            //   setState(() {
+            //     _value = value;
+            //     if (_value) {
+            //       MyApp.of(context)!.changeTheme(ThemeMode.dark);
+            //     } else {
+            //       MyApp.of(context)!.changeTheme(ThemeMode.light);
+            //     }
+            //   });
+            // }),
           ],
         ),
       ),

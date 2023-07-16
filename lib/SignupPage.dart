@@ -19,6 +19,7 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         leading: IconButton(
@@ -31,7 +32,7 @@ class _SignupPageState extends State<SignupPage> {
       body: Center(
         child: Column(
           children: [
-            const Padding(padding: EdgeInsets.all(50.0),child:Text(
+            const Padding(padding: EdgeInsets.all(20.0),child:Text(
               "Instagram",
               style: TextStyle(
                 fontSize: 90,
@@ -46,6 +47,8 @@ class _SignupPageState extends State<SignupPage> {
                     child: TextField(
                       controller: username_controller,
                         decoration: const InputDecoration(
+                          filled: true,
+                          fillColor: Colors.grey,
                           border: OutlineInputBorder(),
                           hintText: 'Username',
                         )))),
@@ -56,6 +59,8 @@ class _SignupPageState extends State<SignupPage> {
                     child: TextField(
                       controller: passwd_controller,
                         decoration: const InputDecoration(
+                          filled: true,
+                          fillColor: Colors.grey,
                           border: OutlineInputBorder(),
                           hintText: 'Password',
                         )))),
@@ -66,6 +71,8 @@ class _SignupPageState extends State<SignupPage> {
                     child: TextField(
                       controller: conpasswd_controller,
                         decoration: const InputDecoration(
+                          filled: true,
+                          fillColor: Colors.grey,
                           border: OutlineInputBorder(),
                           hintText: 'Confirm Password',
                         )))),
@@ -76,6 +83,8 @@ class _SignupPageState extends State<SignupPage> {
                     child: TextField(
                       controller: emailid_controller,
                         decoration:const InputDecoration(
+                          filled: true,
+                          fillColor: Colors.grey,
                           border: OutlineInputBorder(),
                           hintText: 'Email ID',
                         )))),
@@ -101,7 +110,7 @@ class _SignupPageState extends State<SignupPage> {
                     },child:const Text("Sign up"),)
                 )),
             const SizedBox(
-                height: 60,
+                height: 90,
                 width: double.infinity
             ),
             Row(
@@ -115,7 +124,7 @@ class _SignupPageState extends State<SignupPage> {
                   ),
 
                   Text("OR",
-                    style: TextStyle(color: Colors.black.withOpacity(0.5)),),
+                    style: TextStyle(color: Colors.grey.withOpacity(0.5)),),
 
                   const Expanded(
                       child: Divider(

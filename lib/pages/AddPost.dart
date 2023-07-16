@@ -22,6 +22,7 @@ class _AddPostState extends State<AddPost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body:
       Center(
         child:sampleImage == null ? Column(mainAxisAlignment: MainAxisAlignment.center,children: [
@@ -30,9 +31,9 @@ class _AddPostState extends State<AddPost> {
             getImage();
           }, child: const Icon(Icons.add, color: Colors.black,),
             style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                backgroundColor: MaterialStateProperty.all(Colors.grey),
                 elevation: MaterialStateProperty.all(0),
-                shape: MaterialStateProperty.all(RoundedRectangleBorder(side: const BorderSide(color: Colors.black),borderRadius: BorderRadius.circular(10)))
+                shape: MaterialStateProperty.all(RoundedRectangleBorder(side: const BorderSide(color: Colors.grey),borderRadius: BorderRadius.circular(10)))
             ),
 
           ),
@@ -58,9 +59,9 @@ class _AddPostState extends State<AddPost> {
               task.then((res) {
                 res.ref.getDownloadURL();
               });
-            }, child: const Text('Upload!!',style: TextStyle(color: Colors.black),),
+            }, child: const Text('Share',style: TextStyle(color: Colors.blue),),
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
                   elevation: MaterialStateProperty.all(0),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(side: const BorderSide(color: Colors.black),borderRadius: BorderRadius.circular(10)))
               ),),
@@ -68,9 +69,9 @@ class _AddPostState extends State<AddPost> {
               setState(() {
                 sampleImage=null;
               });
-            }, child: const Text("Remove",style: TextStyle(color: Colors.black),),
+            }, child: const Text("Remove",style: TextStyle(color: Colors.blue),),
               style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
                   elevation: MaterialStateProperty.all(0),
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(side: const BorderSide(color: Colors.black),borderRadius: BorderRadius.circular(10)))
               ),)
